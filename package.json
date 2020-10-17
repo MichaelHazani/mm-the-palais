@@ -83,6 +83,7 @@
 		"rrule-alt": "^2.2.8",
 		"simple-git": "^1.85.0",
 		"socket.io": "^2.1.1",
+		"three": "^0.121.1",
 		"valid-url": "latest"
 	},
 	"_moduleAliases": {
