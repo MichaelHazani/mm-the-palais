@@ -60,8 +60,8 @@ var config = {
 						symbol: "calendar-check",
 						url: "https://calendar.google.com/calendar/ical/1ecie0nb1a7d5a2suq6mva8iqs%40group.calendar.google.com/private-63488f5e4ac59a26a097f33839e4fe9e/basic.ics"
 					}
-				]
-			}
+				],
+			},
 		},
 		{
 			module: "currentweather",
@@ -79,7 +79,10 @@ var config = {
 			config: {
 				location: "Seattle",
 				locationID: "5809805", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "45379c5c6739e2f01584f6f857ab12fd"
+				appid: "45379c5c6739e2f01584f6f857ab12fd",
+				colored: "true",
+				fadePoint: 1,
+				maxNumberOfDays: 7,
 			}
 		},
 		{
@@ -89,6 +92,14 @@ var config = {
 				text: "The Palais"
 			}
 		},
+		{
+			module: 'MMM-eventsoundplayer',
+			position: 'top_right',
+			config: {
+				notificationLeadTime: 1000, // 1 sec
+				announcementText: 'Upcoming event',
+			},
+		}
 	]
 };
 
