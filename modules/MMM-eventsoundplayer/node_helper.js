@@ -2,10 +2,13 @@
 
 const NodeHelper = require("node_helper");
 const _ = require("lodash");
-const player = require("play-sound")((opts = {}));
-
+// const player = require("play-sound")((opts = {}));
+const Sound = require('aplay');
 let config = null;
 const eventsInMemoryCache = {};
+
+var exec = require('child_process').exec;
+exec('echo aplay ./audio/alert.wav');
 
 const registerEventNotification = (eventStartingIn, event) => {
 	// console.log(`notifying in ${eventStartingIn} millis`);
@@ -16,10 +19,7 @@ const registerEventNotification = (eventStartingIn, event) => {
 	}
 	setTimeout(() => {
 		console.log(event.title);
-		player.play("./audio/alert.wav", function (err) {
-			if (err) throw err;
-			console.log("Audio finished");
-		});
+	this.sendSocketNotification('PLAY_SOUND', 'wobble.wav');
 	}, eventStartingIn);
 };
 

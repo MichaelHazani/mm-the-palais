@@ -92,6 +92,14 @@ var config = {
 				text: "The Palais"
 			}
 		},
+			{
+		module: 'MMM-Sounds',
+		config: {
+			startupSound:   'wobble.wav',
+			quietTimeStart: '23:00',      // 11pm
+			quietTimeEnd:   '07:00'       // 7am
+		}
+	},
 		{
 			module: 'MMM-eventsoundplayer',
 			position: 'top_right',
